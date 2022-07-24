@@ -89,7 +89,7 @@ async def main():
     await load_extensions()
 
     try:
-        await bot.start(input('input token: '), bot=False)
+        await bot.start(input('input token: '))
     except discord.errors.LoginFailure:
         print(f'[Error] Failed to run bot. Check your token')
         input("Press enter to close the program... ")
