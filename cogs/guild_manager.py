@@ -34,9 +34,6 @@ async def gather_overwrites(element : discord.channel):
         
     return overwrites
 
-
-
-
 async def get_channels(ctx: commands.Context):
     channels = {}
     for channel in ctx.guild.channels:
@@ -73,7 +70,6 @@ async def get_categories(ctx: commands.Context):
             }
 
     return categories
-
 
 async def get_roles(ctx: commands.Context):
     roles = {}
@@ -115,12 +111,13 @@ async def create_channels(ctx: commands.Context, guild, new_roles):
     for category in guild['categories']:
         overwrites = {}
 
-        for overwrite in guild['categories'][channel]['overwrites']:
+        for overwrite in guild['categories'][category]['overwrites']:
             overwrites.update({
-                new_roles[overwrite]: discord.PermissionOverwrite(**guild['categories'][channel]['overwrites'][overwrite])
+                new_roles[overwrite]: discord.PermissionOverwrite(**guild['categories'][category]['overwrites'][overwrite])
             })
         new_category = await ctx.guild.create_category(name=category, position=guild['categories'][category].get('position'), overwrites=overwrites)
         categories[category] = new_category
+        
     for channel in guild['channels']:
         
         params = {
@@ -156,8 +153,6 @@ class GuildManagerCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    
-
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def saveconfig(self, ctx: commands.Context, arg1):
@@ -172,6 +167,8 @@ class GuildManagerCog(commands.Cog):
 
         with open(filename, "w") as f:
             f.write(json.dumps(server, indent=4))
+
+        await ctx.send('Config saved')
 
     @commands.command()
     @commands.has_permissions(administrator=True)
