@@ -1,7 +1,7 @@
 # Discord Sunucu Kopyalama Tool'u
 
 Bu bot, bir Discord sunucusunun kanallarını, kategorilerini ve rollerini yedekleyip başka bir sunucuya yüklemenizi sağlar.
-***Bu 
+
 
 ## Özellikler
 
