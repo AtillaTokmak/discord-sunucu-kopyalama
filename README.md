@@ -18,9 +18,9 @@ Bu bot, bir Discord sunucusunun kanallarını, kategorilerini ve rollerini yedek
 ## Kullanım
 
 - Sunucuyu yedeklemek için:
-!save <yedek_ismi>
+!save_backup <yedek_ismi>
 - Yedeği yüklemek için:
-!load <yedek_ismi>
+!load_backup <yedek_ismi>
 
 
 ## Dikkat Edilmesi Gerekenler
