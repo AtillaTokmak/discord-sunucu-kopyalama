@@ -141,7 +141,7 @@ class ServerClone(commands.Cog):
 
     @commands.command()
     @commands.has_permissions(administrator=True)
-    async def save(self, ctx, name: str):
+    async def save_backup(self, ctx, name: str):
         data = {
             "categories": await self.gather_categories(ctx),
             "channels": await self.gather_channels(ctx),
@@ -152,9 +152,9 @@ class ServerClone(commands.Cog):
             json.dump(data, f, indent=4, ensure_ascii=False)
         await ctx.send(f"Yedekleme başarılı: `{name}`")
 
-    @commands.command()
+    @commands.command(name="load_backup")
     @commands.has_permissions(administrator=True)
-    async def load(self, ctx, name: str):
+    async def load_backup(self, ctx, name: str):
         path = f"backups/{name}.json"
         if not os.path.isfile(path):
             await ctx.send("Böyle bir yedek bulunamadı.")
@@ -169,6 +169,7 @@ class ServerClone(commands.Cog):
         roles_map = await self.recreate_roles(ctx, guild_data)
         await self.recreate_channels(ctx, guild_data, roles_map)
         await ctx.send(f"Yedek yüklendi: `{name}`")
+
 
 async def setup(bot):
     await bot.add_cog(ServerClone(bot))
