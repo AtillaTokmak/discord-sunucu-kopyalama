@@ -11,10 +11,9 @@ Bu bot, bir Discord sunucusunun kanallarını, kategorilerini ve rollerini yedek
 
 ## Kurulum
 
-1. Bot tokenınızı [Discord Developer Portal](https://discord.com/developers/applications) üzerinden alın ve botunuzu oluşturun.
+1. Bot tokenınızı [Discord Developer Portal](https://discord.com/developers/applications) üzerinden alın veya botunuzu oluşturun.
 2. Botu sunucunuza davet edin ve yönetici yetkisi verin.
-3. Kodları indirin ve `cogs` klasörünün içinde `serverclone.py` dosyasının olduğundan emin olun.
-4. `bot.py` dosyasını kendi tokenınızla çalıştırın.
+3. `bot.py` dosyasını kendi tokenınızla çalıştırın.
 
 ## Kullanım
 
