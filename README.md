@@ -36,7 +36,7 @@ Bu bot, bir Discord sunucusunun kanallarını, kategorilerini ve rollerini yedek
 
 ## Sorumluluk Reddi
 
-Bu proje eğitim amaçlı geliştirilmiştir. Kullanıcılar, botu kendi sunucularında ve izin verdikleri sunucularda kullanmalıdır. Başka sunucuların izinsiz kopyalanması yasal ve etik değildir. Kodun sahibi, bu projeyle ilgili doğabilecek herhangi bir sorumluluğu kabul etmez.
+Bu proje eğitim amaçlı geliştirilmiştir. Kullanıcılar, botu kendi sunucularında ve izin verdikleri sunucularda kullanmalıdır. Başka sunucuların izinsiz kopyalanması yasal ve etik değildir. Projenin sahibi, bu projeyle ilgili doğabilecek herhangi bir sorumluluğu kabul etmez.
 
 ## Fork Bilgisi
 
